@@ -75,7 +75,7 @@ Từ tổng quan đến chi tiết */
 #slider{
     margin-top: 46px;
     padding-top: 50%;
-    background: url('/assets/img/Band.jpg') top center / cover no-repeat;
+    background: url('https://i.pinimg.com/originals/66/ab/d2/66abd2d090c97babdfdc2334d4e31698.png') top center / cover no-repeat;
     /* background : img / position / size / repeat */
     position: relative;
 }
