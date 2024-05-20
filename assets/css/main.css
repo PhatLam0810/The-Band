@@ -26,11 +26,14 @@ Từ tổng quan đến chi tiết */
 #nav{
     display: inline-block;
 }
-#nav li {
+#nav >li {
     display: inline-block;
-    align-items: center;
 }
-#nav li a{
+#nav li {
+    align-items: center;
+    position: relative;
+}
+#nav > li > a{
     text-decoration: none;
     color: #fff;
     font-size: 15px;
@@ -38,19 +41,42 @@ Từ tổng quan đến chi tiết */
     text-transform: uppercase;
     font-weight: 300;
     line-height: 46px;
-    display: inline-block;
+    display: block;
 }
-#nav li:hover a{
+#subnav li{
+    width: 100%;
+}
+#subnav li a{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 46px;
+    display: block;
+    text-decoration: none;
+}
+
+#nav > li:hover > a,
+#nav #subnav li :hover  {
     background-color: #cbcbcb;
     color: #000;
 }
-#subnav{
+#nav li:hover #subnav {
+    display: block;
+}
+#nav #subnav{
     position: absolute;
     list-style: none;
-    background-color: red;
-    margin-top: 14px;
+    background-color: #fff;
     display: none;
+    box-shadow: 0 0 10px rgb(0, 0, 0,0.3);
+    
 }
+#nav #subnav a{
+    color: #000;
+    padding-left: 12px;
+    padding-right: 56px;
+    line-height: 38px;
+}
+
 .nav-item__more .subnav:hover{
     display: block;
 }
@@ -273,14 +299,18 @@ Từ tổng quan đến chi tiết */
     width: 100%;
     font-size: 15px;
     padding: 64px 16px;
-    color: #666666;
+    opacity: 0.6;    
+}
+#footer .footer-icon:hover{
+    cursor: pointer;
+    opacity: 0.3;
 }
 #footer p {
     margin-top: 30px;
 }
 #footer p a {
-    color: #a9a9a9;
+    color: rgb(0, 0, 0,0.8);
 }
 .fa-brands{
-    font-size: 20px;
+    font-size: 22px;
 }
