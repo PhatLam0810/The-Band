@@ -1,0 +1,58 @@
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+    /* Phần Header */
+
+    /* Container */
+    #content .container{
+        max-width: 100%;
+        padding: 64px 16px 112px 16px;
+    }
+}
+/* Mobile width <=740px */
+@media only screen and (max-width: 740px) {
+    /* Header */
+    #header{
+        overflow: hidden;
+    }
+    /* Nav */
+    #nav >li {
+        display: block;
+    }
+    #header .search-button{
+        display: none;
+    }
+    /* Slider */
+    .slider-text{
+        bottom: 0;
+        padding: 0 16px;
+    }
+    .slider-text div {
+        font-size: 12px;
+        line-height: 4px;
+
+    }
+    /* Content */
+    #content .container{
+        max-width: 400px;
+        padding: 64px 16px 112px 16px;
+    }
+    /* Member */
+    .col-3{
+        width: 100%;
+    }
+    /* Ticket item */
+    .ticket-list{
+        margin: 10px 0;
+    }
+    /* Contact */
+    .col-2 {
+        width: 100%;
+    }
+    .input-name{
+        margin: 16px 0 8px 0;
+    }
+    .input-email{
+        margin: 8px 0;
+    }
+    
+}

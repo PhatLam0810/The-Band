@@ -86,6 +86,7 @@ Từ tổng quan đến chi tiết */
 .nav-icon__down{
     font-weight: 100;
 }
+#header .mobile-menu-btn,
 #header .search-button{
     color: #fff;
     font-size: 15px;
@@ -93,10 +94,12 @@ Từ tổng quan đến chi tiết */
     line-height: 46px;
     padding: 0 21px;
 }
+#header .mobile-menu-btn:hover,
 #header .search-button:hover{
     background-color: #f44336;
     cursor: pointer;
 }
+
 /* Phan anh slider */
 #slider{
     margin-top: 46px;
