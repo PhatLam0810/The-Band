@@ -121,6 +121,7 @@ Từ tổng quan đến chi tiết */
     padding: 32px 16px;
     width: 100%;
     text-align: center;
+    text-shadow: 0 0 3px #333;
 }
 .slider-text__heading{
     margin: 10px 0;
