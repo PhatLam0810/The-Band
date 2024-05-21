@@ -1,11 +1,32 @@
-/* Tablet: width >= 740px and width < 1024px */
-@media only screen and (min-width: 740px) and (max-width: 1023px) {
-    /* Phần Header */
-
-    /* Container */
+/* Tablet vs Mobile */
+@media only screen and (max-width: 1023px) {
+    /* Footer */
+    #footer{
+        font-size: 20px;
+    }
+    #footer i {
+        font-size: 30px;
+      
+        padding: 6px;
+    }
     #content .container{
         max-width: 100%;
         padding: 64px 16px 112px 16px;
+    }
+
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+    /* Ticket item */
+    .ticket-list .btn-buy{
+        width: 100%;
+        padding: 12px 16px;
+    }
+    /* Contact */
+    .btn-send{
+        width: 50%;
+        padding: 12px 16px;
     }
 }
 /* Mobile width <=740px */
@@ -14,12 +35,29 @@
     #header{
         overflow: hidden;
     }
+    #header .mobile-menu-btn{
+        display: block;
+    }
     /* Nav */
+    #header .search-button{
+        display: none;
+    }
+    #nav {
+        display: block;
+    }
     #nav >li {
         display: block;
     }
-    #header .search-button{
-        display: none;
+    #nav #subnav {
+        position: inherit;
+        background-color: #333;
+    }
+    #nav #subnav a{
+        color: #fff;
+        padding: 5px 40px;
+    }
+    #nav > li > a{
+        padding: 2px 24px;
     }
     /* Slider */
     .slider-text{
@@ -31,18 +69,21 @@
         line-height: 4px;
 
     }
-    /* Content */
-    #content .container{
-        max-width: 400px;
-        padding: 64px 16px 112px 16px;
-    }
     /* Member */
     .col-3{
         width: 100%;
     }
+    #content .members-img{
+        width: 200px;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
     /* Ticket item */
     .ticket-list{
         margin: 10px 0;
+    }
+    .ticket-list .btn-buy {
+        width: 100%;
     }
     /* Contact */
     .col-2 {
@@ -54,5 +95,10 @@
     .input-email{
         margin: 8px 0;
     }
-    
+    .contact-band{
+        padding: 45px 0px;
+    }
+    .btn-send{
+        width: 100%;
+    }
 }

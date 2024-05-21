@@ -15,7 +15,7 @@
         <div id="header">
             <!-- Begin nav -->
             <ul id="nav">
-                <li><a href="#">Home</a></li>
+                <li style="display: inline-block;"><a  href="#">Home</a></li>
                 <li><a href="#Band">Band</a></li>
                 <li><a href="#Tour">Tour</a></li>
                 <li><a href="#Contact">Contact</a></li>
@@ -132,10 +132,10 @@
                                 <i class="fa-solid fa-location-dot" style="width: 30px;"></i>Chicago, US
                             </p>
                             <p class="band-info">
-                                <i class="fa-solid fa-phone" style="width: 30px;"></i>Phone: +00 151515
+                                <i class="fa-solid fa-phone" style="width: 30px;"></i>Phone: <a href="tel :+84 0774121713 "> 0774121743</a>
                             </p>
                             <p class="band-info">
-                                <i class="fa-solid fa-envelope" style="width: 30px;"></i>Email: mail@mail.com
+                                <i class="fa-solid fa-envelope" style="width: 30px;"></i>Email: <a href="mailto :https://mail.google.com/mail/u/0/#inbox">lamtanphat08@mail.com</a>
                             </p>
                         </ul>
                         <div class="col col-2" style="margin-top: -8px;">
@@ -202,9 +202,16 @@
             var menuItem = menuItems[i];
             
             menuItem.onclick = function(){
-                header.style.height = null ;
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.getElementById.contains('subnav');
+                if(isParentMenu){
+                    event.preventDefault();
+                } else{
+                    header.style.height = null ;
+                }
+
+
             }
         }
-    </script>
+    </script> 
 </body>
 </html>
