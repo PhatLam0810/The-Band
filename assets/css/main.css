@@ -10,9 +10,7 @@ Từ tổng quan đến chi tiết */
 3. Màu sắc
 4. Kiểu Dáng
  */
-#main{
 
-}
 /* Phan header + navbar */
 #header{
     position: fixed;
@@ -26,11 +24,14 @@ Từ tổng quan đến chi tiết */
 #nav{
     display: inline-block;
 }
-#nav li {
+#nav >li {
     display: inline-block;
-    align-items: center;
 }
-#nav li a{
+#nav li {
+    align-items: center;
+    position: relative;
+}
+#nav > li > a{
     text-decoration: none;
     color: #fff;
     font-size: 15px;
@@ -38,19 +39,42 @@ Từ tổng quan đến chi tiết */
     text-transform: uppercase;
     font-weight: 300;
     line-height: 46px;
-    display: inline-block;
+    display: block;
 }
-#nav li:hover a{
+#subnav li{
+    width: 100%;
+}
+#subnav li a{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 46px;
+    display: block;
+    text-decoration: none;
+}
+
+#nav > li:hover > a,
+#nav #subnav li :hover  {
     background-color: #cbcbcb;
     color: #000;
 }
-#subnav{
+#nav li:hover #subnav {
+    display: block;
+}
+#nav #subnav{
     position: absolute;
     list-style: none;
-    background-color: red;
-    margin-top: 14px;
+    background-color: #fff;
     display: none;
+    box-shadow: 0 0 10px rgb(0, 0, 0,0.3);
+    
 }
+#nav #subnav a{
+    color: #000;
+    padding-left: 12px;
+    padding-right: 56px;
+    line-height: 38px;
+}
+
 .nav-item__more .subnav:hover{
     display: block;
 }
@@ -60,24 +84,35 @@ Từ tổng quan đến chi tiết */
 .nav-icon__down{
     font-weight: 100;
 }
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+#header .mobile-menu-btn,
 #header .search-button{
     color: #fff;
     font-size: 15px;
     float: right;
     line-height: 46px;
     padding: 0 21px;
+  
 }
+#header .mobile-menu-btn:hover,
 #header .search-button:hover{
     background-color: #f44336;
     cursor: pointer;
 }
+
 /* Phan anh slider */
 #slider{
     margin-top: 46px;
     padding-top: 50%;
-    background: url('/assets/img/New\ York.jpg') top center / cover no-repeat;
+    background: url('https://i.pinimg.com/originals/66/ab/d2/66abd2d090c97babdfdc2334d4e31698.png') top center / cover no-repeat;
     /* background : img / position / size / repeat */
     position: relative;
+    
 }
 .slider-text{
     position: absolute;
@@ -86,6 +121,7 @@ Từ tổng quan đến chi tiết */
     padding: 32px 16px;
     width: 100%;
     text-align: center;
+    text-shadow: 0 0 3px #333;
 }
 .slider-text__heading{
     margin: 10px 0;
@@ -206,7 +242,6 @@ Từ tổng quan đến chi tiết */
     margin-bottom: 16px;
     color: #fff;
     background-color: #000;
-    justify-content: center;
     text-align: center;
     font-size: 15px;
 }
@@ -272,14 +307,18 @@ Từ tổng quan đến chi tiết */
     width: 100%;
     font-size: 15px;
     padding: 64px 16px;
-    color: #666666;
+    opacity: 0.6;    
+}
+#footer .footer-icon:hover{
+    cursor: pointer;
+    opacity: 0.3;
 }
 #footer p {
     margin-top: 30px;
 }
 #footer p a {
-    color: #a9a9a9;
+    color: rgb(0, 0, 0,0.8);
 }
 .fa-brands{
-    font-size: 20px;
+    font-size: 22px;
 }
